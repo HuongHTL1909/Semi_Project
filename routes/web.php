@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('/login-page', function(){
     return view('login-page');
 });
+Route::get('login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
+Route::post('login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@postLogin']);
